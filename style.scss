@@ -1,0 +1,637 @@
+// Обнуляем стили
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+// Объявим переменные
+$color-dark:#222222;
+$color-light: #F8F8F8;
+$text-dark: #000000;
+$text-light: #5D5D5D;
+$accent-light: #F1E4E6;
+$accent-dark:#F16D7F;
+
+// Импортируем шрифт
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+// Контейнер с запасом на паддинги
+.container {
+    max-width: 1160px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+// Вспомогательный класс
+    .hidden {
+        display: none;
+    }
+
+// Header
+.header {
+    background: $color-dark;
+    &__flex {
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__right .header__link-img{
+        vertical-align: middle;
+    }
+    &__link:first-child {
+        margin: 0 41px 0 0;
+    }
+    &__link span{
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        color: white;
+        background: $accent-dark;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        right: -8px;
+        top: -10px;
+        font-size: 12px;
+        line-height: 19px;
+    }
+    &__link-blink {
+        margin: 0 0 0 33px;
+    }
+    &__link-blink:last-child {
+        // display: inline;
+        position: relative;
+        margin-right: 10px;
+    }
+    &__button {
+        background: $color-dark;
+        border: none;
+        cursor: pointer;
+    }
+}
+@media (max-width: 1160px) {
+    .header {
+        & .container {
+            padding: 0 32px;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .header {
+        & .container {
+            padding: 0 16px;
+        }
+        &__link-blink {
+            display: none;
+        }
+    }
+}
+
+// Баннер
+.banner {
+    height: 768px;
+    background-color: $accent-light;
+    position: relative;
+    &__flex {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        background: url(img/banner.png) no-repeat -35% bottom;
+        background-size: 70%;
+    }
+    &__right {
+        width: 40%;
+        border-left: 12px solid $accent-dark;
+        padding: 0 0 0 16px;
+        margin-left: 52%;
+    }
+    & h2 {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+    }
+    & h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+    }
+    & span {
+        color: $accent-dark;
+    }
+}
+@media (max-width: 1020px) {
+    .banner {
+        height: 363px;
+        &__flex {
+            background: url(img/banner.png) no-repeat 10% bottom;
+            background-size: 360px;
+        }
+        &__right {
+            width: 50%;
+        }
+        & h2 {
+            font-size: 44px;
+            line-height: 53px;
+        }
+        & h3 {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+}
+@media (max-width: 740px) {
+    .banner {
+        &__flex {
+            background-image: none;
+            justify-content: center;
+        }
+        &__right {
+            width: 270px;
+            margin-left: 0;
+        }
+        & h2 {
+            font-size: 38px;
+            line-height: 46px;
+        }
+        & h3 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+// Боковое меню
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: RGBA(0,0,0,0.5);
+    &__box {
+        width: 232px;
+        height: inherit;
+        background: $color-light;
+        margin-left: auto;
+        box-shadow: 6px 4px 35px rgb(0, 0, 0 / 21%);
+        padding: 37px 24px;
+        position: relative;
+        overflow: auto;
+    }
+    &__close {
+        position: absolute;
+        border: none;
+        background: $color-light;
+        right: 16px;
+        top: 16px;
+        cursor: pointer;
+    }
+    & h4 {
+        padding: 0 0 0 4px;
+    }
+    & ul {
+        color: $accent-dark;
+        padding: 20px 0 1px 0;
+    }
+    & li {
+        padding: 11px 0 0 21px;
+    }
+    & a {
+        color: $text-light;
+    }
+}
+@media (max-width: 768px) {
+    .menu {
+        &__box {
+            width: 100%;
+            height: fit-content;
+            margin-left: auto;
+            padding: 37px 24px;
+            overflow: auto;
+            z-index: 2;
+        }
+    }
+}
+
+//Избранные категории
+.category {
+    padding-top: 64px;
+    &__grid {
+        max-width: 1140px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__accesories {
+        grid-column: 1/-1;
+    }
+    &__img {
+        width: 100%;
+        object-fit: contain;
+    }
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title span {
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-light;
+    }
+    &__title h3 {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+        color: $accent-dark;
+    }
+}
+@media (max-width: 1160px) {
+    .category {
+        padding-top: 20px;
+        &__grid {
+            gap: 20px;
+        }
+    }
+}
+@media (max-width: 740px) {
+    .category {
+        padding-top: 64px;
+        &__grid {
+            margin: auto;
+            width: 343px;
+            grid-template-columns: 343px;
+            grid-template-rows: auto, 111px;
+            gap: 32px;
+        }
+        &__item {
+            align-self: center;
+        }
+        &__accesories img{
+            object-fit: cover;
+            height: 100%;
+        }
+        &__accesories {
+            height: 111px;
+        }
+    }
+}
+@media (max-width: 370px) {
+    .category {
+        &__grid {
+            width: 300px;
+            grid-template-columns: 300px;
+        }
+    }
+}
+
+// Избранные товары 
+.featured {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    & h3 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+    }
+    & p {
+        padding-top: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;  
+        color: $text-light;
+        text-align: center;
+    }
+    &__flex {
+        padding-top: 48px;
+        padding-bottom: 48px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__item:hover {
+        box-shadow: 0 0 10px RGBA(0,0,0,0.5);
+    }
+    &__item:hover .featured__img {
+        filter: brightness(50%);
+    }
+    &__item:hover .featured__cart-block {
+        display: flex;
+        justify-content: center;
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        background: $color-light;
+    }
+    &__img {
+        width: 100%;
+    }
+    & h4 {
+        padding: 24px 18px 0 18px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: $text-dark;
+    }
+    &__text {
+        padding: 12px 18px 0 18px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: $text-light;
+    }
+    &__price {
+        padding: 18px 18px 20px 18px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $accent-dark;
+    }
+    &__cart-block {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 188px;
+    }
+    &__button {
+        padding: 10px 13px 8px 13px;
+        background: none;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-light;
+        border: 1px solid $color-light;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__cart-img {
+        vertical-align: middle;
+    }
+    &__browse {
+        display: block;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $accent-dark;
+        background-color: $color-light;
+        border: 1px solid $accent-dark;
+        padding: 15px 39px 14px 39px;
+        cursor: pointer;
+    }
+    &__browse:hover {
+        color: $color-light;
+        background-color: $accent-dark;
+    }
+}
+@media (max-width: 1160px) {
+    .featured {
+        padding-top: 155px;
+        padding-bottom: 65px;
+        &__flex {
+            padding-top: 73px;
+            padding-bottom: 32px;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        &__cart-block {
+            top: 250px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .featured {
+        padding-top: 64px;
+        padding-bottom: 96px;
+        &__flex {
+            margin: auto;
+            padding-top: 64px;
+            padding-bottom: 41px;
+            max-width: 343px;
+            grid-template-columns: 1fr;
+        }
+        &__cart-block {
+            top: 180px;
+        }
+    }
+}
+
+// Преимущества
+.features {
+    background: $color-dark;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 56px 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 300px;
+        height: 134px;
+        margin: 48px 10px 48px 10px;
+    }
+    & h4 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-light;
+    }
+    & p {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: $color-light;
+    }
+}
+@media (max-width: 1160px) {
+    .features {
+        &__flex {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 0 64px 0;
+        }
+        &__item {
+            margin: 48px 10px 0 10px;
+        }
+    }
+}
+
+// Рассылка
+.feedback {
+    background-image: linear-gradient(rgba(244, 244, 244, 0.7)), url(img/subscribe_back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    &__flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 87px 0 126px 0;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__review {
+        padding: 30px 0 0 0;
+        max-width: 386px;
+        text-align: center;
+    }
+    &__review-text1 {
+        font-size: 20px;
+        line-height: 24px;
+        color: $text-dark;
+    }
+    &__review-text2 {
+        font-size: 20px;
+        line-height: 24px;
+        font-style: italic;
+        color: $text-dark;
+    }
+    &__right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0 0 0;
+    }
+    &__text1 {
+        font-size: 24px;
+        line-height: 37px;
+        font-weight: 700;
+        color: $text-dark;
+    }
+    &__text2 {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 400;
+        color: $text-dark;
+    }
+    &__email {
+        margin: 25px auto 0;
+        display: inline-block;
+        width: 334px;
+    }
+    &__mail-flex {
+        display: flex;
+    }
+    &__email-input {
+        padding: 16px 10px;
+        border-radius: 25px 0  0 25px;
+        width: 230px;
+        height: 46px;
+        background-color: $color-light;
+        outline: none;
+        border: none;
+    }
+    &__email-input:focus {
+        outline: none;  
+        border: 1px solid $accent-dark;
+    }
+    &__button {
+        cursor: pointer;
+        width: 104px;
+        height: 46px;
+        background-color: $accent-dark;
+        border-radius: 0px 25px 25px 0px;
+        border: none;
+    }
+}
+@media (max-width:740px) {
+    .feedback {
+        background-size: cover;
+        &__flex {
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0 80px 0;
+        }
+        &__right {
+            width: 99%;
+        }
+    }
+}
+@media (max-width:370px) {
+    .feedback {
+        &__email {
+            width: 300px;
+        }
+        &__email-input {
+            width: 190px;
+        }
+        &__text2 {
+            text-align: center;
+        }
+    }
+}
+
+// Подвал
+.footer {
+    background: $color-dark;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 24px;
+        padding-bottom: 23px;
+    }
+    &__left {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-light;
+    }
+    &__social {
+        background: $color-light;
+        padding: 6px 5px 8px 5px;
+        margin-left: 5px;
+        color: $text-dark;
+    }
+    &__social:hover {
+        background: $accent-dark;
+        color: $color-light;
+    }
+}
+@media (max-width: 1160px) {
+    .footer {
+        &__flex {
+            padding: 24px 32px 23px 32px;
+        }
+    }
+}
+@media (max-width: 740px) {
+    .footer {
+        &__flex {
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 24px 20px 23px 20px;
+        }
+        &__right {
+            padding: 20px 0 40px 0;
+        }
+    }
+}
