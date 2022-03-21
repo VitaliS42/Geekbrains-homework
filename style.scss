@@ -169,7 +169,7 @@ $accent-dark: #F16D7F;
     left: 0;
     height: 100%;
     width: 100%;
-    background: RGBA(0,0,0,0.5);
+    background: rgba(0,0,0,0.5);
     &__box {
         width: 232px;
         height: inherit;
@@ -316,7 +316,7 @@ $accent-dark: #F16D7F;
         position: relative;
     }
     &__item:hover {
-        box-shadow: 0 0 10px RGBA(0,0,0,0.5);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
     &__item:hover .featured__img {
         filter: brightness(50%);
@@ -678,7 +678,7 @@ $accent-dark: #F16D7F;
         width: 100%;
     }
     &__arrows>div {
-        padding: 12px 25px;
+        padding: 12px 20px;
         background-color: rgba(42, 42, 42, 0.15);
         cursor: pointer;
     }
@@ -686,7 +686,7 @@ $accent-dark: #F16D7F;
         color: $accent-dark;
     }
     &__card {
-        background-color: $color-light;
+        background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -694,10 +694,11 @@ $accent-dark: #F16D7F;
         position: relative;
         padding: 65px 0 0 0;
         z-index: 2;
-        border: 1px solid $color-light;
+        border: 1px solid #EAEAEA;
     }
     &__card>hr {
         width: 641px; 
+        color: #EAEAEA;
     }
     &__card-line {
         width: 63px;
@@ -746,7 +747,7 @@ $accent-dark: #F16D7F;
         cursor: pointer;
     }
     &__card-button {
-        padding: 14px 56px 14px 23px;
+        padding: 14px 56px 14px 40px;
         background-color: $color-light;
         border: 1px solid $accent-dark;
         color: $accent-dark;
@@ -761,6 +762,11 @@ $accent-dark: #F16D7F;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    @media (max-width: 1160px) {
+        &__card {
+            margin-top: 0;
+        }  
     }
     @media (max-width: 740px) {
         &__card-description {
