@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a975bb762f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Панель навигации -->
+    <header class="header">
+
+        <div class="header__flex container">
+            
+            <div class="header__left">
+
+                <a class="header__link" href="index.html">
+                    <img class="header__link-img" src="img/logo.svg" alt="Logo">
+                </a>
+
+                <button class="header__button">
+                    <img class="header__link-img" src="img/search.svg" alt="Search">
+                </button>
+                
+            </div>
+
+            <div class="header__right">
+
+                <button class="header__button header__menu">
+                    <img class="header__link-img" src="img/menu.svg" alt="Menu">
+                </button>
+
+                <a class="header__link header__link-blink" href="registration.html">
+                    <img class="header__link-img" src="img/user.svg" alt="User">
+                </a>
+
+                <a class="header__link header__link-blink" href="cart.html">
+                    <img class="header__link-img" src="img/cart.svg" alt="Cart">
+                    <span>5</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- Заголовок MAINа -->
+    <header class="nav__header">
+        <div class="nav__flex container">
+            <div class="nav__heading">
+                <h3>SHOPPING CART</h3>
+            </div>
+        </div>
+    </header>
+    <section class="cart">
+        <div class="container">
+            <div class="cart__flex">
+                <section class="cart__left">
+                    <div class="cart__goods">
+                        <div class="cart__item">
+                            <img class="cart__item-foto" src="img/goods/item3.png" alt="">
+                            <div class="cart__item-label">
+                                <a class="cart__item-anchor" href="#">MANGO  PEOPLE  T&nbsp;-&nbsp;SHIRT</a>
+                                <div class="cart__item-price">
+                                    <p>Price:&nbsp;</p><p class="pinky">300$</p>
+                                </div>
+                                <span>Color: Red</span>
+                                <span>Size: XL</span>
+                                <span>Quantity: 2</span>
+                            </div>
+                            <button class="cart__item-del"><i class="fa fa-times fa-2x"></i></button>
+                        </div>
+                        <div class="cart__item">
+                            <img class="cart__item-foto" src="img/goods/item12.png" alt="">
+                            <div class="cart__item-label">
+                                <a class="cart__item-anchor" href="#">MANGO  PEOPLE  T&nbsp;-&nbsp;SHIRT</a>
+                                <div class="cart__item-price">
+                                    <p>Price:&nbsp;</p><p class="pinky">300$</p>
+                                </div>
+                                <span>Color: Red</span>
+                                <span>Size: XL</span>
+                                <span>Quantity: 2</span>
+                            </div>
+                            <button class="cart__item-del"><i class="fa fa-times fa-2x"></i></button>
+                        </div>
+                    </div>
+                    <div class="cart__buttons">
+                        <button class="cart__button">CLEAR SHOPPING CART</button>
+                        <button class="cart__button">CONTINUE SHOPPING</button>
+                    </div>
+                </section>
+                <section class="cart__right">
+                    <div class="cart__input-block">
+                        <form action="#">
+                            <legend>SHIPPING ADRESS</legend> 
+                            <input class="cart__input" type="text" placeholder="Country" required>
+                            <input class="cart__input" type="text" placeholder="State" required>
+                            <input class="cart__input" type="number" placeholder="Postcode / Zip" required>
+                            <button type="submit" class="cart__submit" name="submitbtn" value="subm">GET A QUOTE</button>
+                        </form>
+                    </div>
+                    <div class="cart__total">
+                        <div class="cart__total-container">
+                            <span class="cart__subtotal">SUB TOTAL&emsp;</span>
+                            <span class="cart__subtotal">$900</span><br>
+                            <span class="cart__grandtotal">GRAND TOTAL&emsp;</span>
+                            <span class="cart__grandtotal pinky">$900</span>
+                            <hr>
+                            <button type="submit" class="cart__checkout" name="submitbtn" value="subm">PROCEED TO CHECKOUT</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Футер с подпиской и подвалом -->
+    <footer>
+        <!-- Подписка -->
+        <section class="feedback">
+            <h4 class="visually-hidden">Subscribe</h4>
+            <div class="container">
+
+                <div class="feedback__flex">
+
+                    <div class="feedback__left">
+
+                        <img class="feedback__foto" src="img/subscribe.png" height="96" width="96" alt="feedback">
+                        <div class="feedback__review">
+                            <span class="feedback__review-text1">
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,</span>
+                                <span class="feedback__review-text2">a pulvinar purus condimentum“
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="feedback__right">
+
+                        <span class="feedback__text1">SUBSCRIBE</span>
+                        <span class="feedback__text2">FOR OUR NEWLETTER AND PROMOTION</span>
+
+                        <form class="feedback__email" action="#">
+                            <div class="feedback__mail-flex">
+                                <input class="feedback__email-input" type="email" placeholder="Enter Your Email">
+                                <button class="feedback__button" type="submit"><span>Subscribe</span></button>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Подвал -->
+        <section class="footer">
+            <h4 class="visually-hidden">Join Us</h4>
+            <div class="container">
+
+                <div class="footer__flex">
+
+                    <div class="footer__left">© 2017  Brand  All Rights Reserved.</div>
+
+                    <div class="footer__right">
+                        <a class="footer__social" href="#"><span class="fa fa-facebook-f fa-fw fa-lg"></span></a>
+                        <a class="footer__social" href="#"><span class="fa fa-instagram fa-fw fa-lg"></span></a>
+                        <a class="footer__social" href="#"><span class="fa fa-pinterest fa-fw fa-lg"></span></a>
+                        <a class="footer__social" href="#"><span class="fa fa-twitter fa-fw fa-lg"></span></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </footer>
+
+    <!-- Подключение скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>
