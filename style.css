@@ -348,6 +348,10 @@
   padding-bottom: 96px;
 }
 
+.featured__padding-collapse {
+  margin-top: -96px;
+}
+
 .featured h3 {
   font-weight: 400;
   font-size: 30px;
@@ -361,6 +365,9 @@
   font-size: 14px;
   line-height: 17px;
   color: #5D5D5D;
+}
+
+.featured__top-p {
   text-align: center;
 }
 
@@ -480,10 +487,164 @@
   background-color: #F16D7F;
 }
 
+.featured__top-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featured__filter {
+  width: 100px;
+  position: absolute;
+  z-index: 1;
+  padding: 0 0 0 16px;
+}
+
+.featured__filter > summary {
+  line-height: 40px;
+}
+
+.featured__filter[open] {
+  padding: 0 0 0 0;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  width: 360px;
+  z-index: 3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.featured__filter[open] > summary {
+  color: #F16D7F;
+  padding: 0 0 0 16px;
+  z-index: 3;
+  background-color: white;
+}
+
+.featured__filter-content {
+  background-color: white;
+  width: 360px;
+  padding: 0 0 10px 0;
+}
+
+.featured__filter-title > summary {
+  padding: 11px 0 11px 11px;
+  border-left: 5px solid #F16D7F;
+  border-bottom: 1px solid white;
+  margin: 9px 16px 0 17px;
+}
+
+.featured__filter-list {
+  list-style: none;
+  margin-left: 17px;
+}
+
+.featured__filter-item {
+  padding: 11px 0 0 0;
+}
+
+.featured__filter-link {
+  text-decoration: none;
+  color: #5D5D5D;
+  padding: 0 0 0 10px;
+}
+
+.featured__selectors {
+  padding: 0 28px 0 0;
+}
+
+.featured__selectors > summary {
+  padding: 0 0 0 10px;
+}
+
+.featured__selectors-flex {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.featured__selectors-content {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  width: 79px;
+  padding: 10px 0 0 10px;
+}
+
+.featured__selectors-list {
+  list-style: none;
+}
+
+.featured__selectors-item {
+  padding: 3px 10px 3px 1px;
+}
+
+.featured__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.featured__pagination-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 12px 15px;
+  border: 1px solid #F8F8F8;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featured__pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featured__pagination-link {
+  padding: 6px;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #5D5D5D;
+}
+
+.featured__pagination-link:hover {
+  color: #F16D7F;
+}
+
 @media (max-width: 1160px) {
   .featured {
     padding-top: 155px;
     padding-bottom: 65px;
+  }
+  .featured__padding-collapse {
+    margin-top: -155px;
   }
   .featured__flex {
     padding-top: 73px;
@@ -498,12 +659,18 @@
   .featured__product-page > .featured__item:last-child {
     display: none;
   }
+  .featured__selectors-flex {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 767px) {
   .featured {
     padding-top: 64px;
     padding-bottom: 96px;
+  }
+  .featured__padding-collapse {
+    margin-top: -64px;
   }
   .featured__flex {
     margin: auto;
@@ -518,6 +685,30 @@
   }
   .featured__product-page > .featured__item:last-child {
     display: block;
+  }
+  .featured__filter[open] {
+    padding: 0 0 0 0;
+    -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: 100%;
+    z-index: 3;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .featured__filter-span {
+    display: none;
+  }
+  .featured__filter-content {
+    width: 100%;
+  }
+  .featured__selectors {
+    padding: 0 20px 0 0;
+  }
+  .featured__selectors > summary {
+    padding: 0 0 0 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
