@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a975bb762f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Панель навигации -->
+    <header class="header">
+
+        <div class="header__flex container">
+            
+            <div class="header__left">
+
+                <a class="header__link" href="index.html">
+                    <img class="header__link-img" src="img/logo.svg" alt="Logo">
+                </a>
+
+                <button class="header__button">
+                    <img class="header__link-img" src="img/search.svg" alt="Search">
+                </button>
+                
+            </div>
+
+            <div class="header__right">
+
+                <button class="header__button header__menu">
+                    <img class="header__link-img" src="img/menu.svg" alt="Menu">
+                </button>
+
+                <a class="header__link header__link-blink" href="registration.html">
+                    <img class="header__link-img" src="img/user.svg" alt="User">
+                </a>
+
+                <a class="header__link header__link-blink" href="cart.html">
+                    <img class="header__link-img" src="img/cart.svg" alt="Cart">
+                    <span>5</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- Заголовок MAINа -->
+    <header class="nav__header">
+        <div class="nav__flex container">
+            <div class="nav__heading">
+                <h3>REGISTRATION</h3>
+            </div>
+        </div>
+    </header>
+    <!-- Блок с регистрацией -->
+    <section class="reg-block">
+        <h4 class="visually-hidden">Registration</h4>
+        <div class="container">
+            <div class="reg-block__flex">
+                <div class="reg-block__left">
+                <form action="#">
+                    <span>Your name</span>
+                    <input class="reg-block__input" type="text" placeholder="First Name" required><br>
+                    <input class="reg-block__input" type="text" placeholder="Last Name" required><br>
+                    <label><input class="reg-block__radio" type="radio" name="gender" checked> Male&emsp;</label>
+                    <label><input class="reg-block__radio" type="radio" name="gender"> Female&emsp;</label><br>
+                    <span>Login details</span>
+                    <input class="reg-block__input" type="email" placeholder="Email" required><br>
+                    <input class="reg-block__input" type="password" placeholder="Password" required><br>
+                    <p class="reg-block__tip">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+                    <button type="submit" class="reg-block__submit" name="submitbtn" value="subm">JOIN NOW &emsp;<i class="fa fa-long-arrow-right "></i></button>
+                </form>
+                </div>
+                <div class="reg-block__right">
+                    <span>LOYALTY HAS ITS PERKS</span><br>
+                    <span class="reg-block__span-padding">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</span>
+                    <ul class="reg-block__perks-list">
+                        <li class="reg-block__perks-item">&#10003;&emsp;15% off welcome offer</li>
+                        <li class="reg-block__perks-item">&#10003;&emsp;Free shipping, returns and exchanges on all orders</li>
+                        <li class="reg-block__perks-item">&#10003;&emsp;$10 off a purchase on your birthday</li>
+                        <li class="reg-block__perks-item">&#10003;&emsp;Early access to products</li>
+                        <li class="reg-block__perks-item">&#10003;&emsp;Exclusive offers & rewards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Футер с подпиской и подвалом -->
+    <footer>
+        <!-- Подписка -->
+        <section class="feedback">
+            <h4 class="visually-hidden">Subscribe</h4>
+            <div class="container">
+
+                <div class="feedback__flex">
+
+                    <div class="feedback__left">
+
+                        <img class="feedback__foto" src="img/subscribe.png" height="96" width="96" alt="feedback">
+                        <div class="feedback__review">
+                            <span class="feedback__review-text1">
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,</span>
+                                <span class="feedback__review-text2">a pulvinar purus condimentum“
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="feedback__right">
+
+                        <span class="feedback__text1">SUBSCRIBE</span>
+                        <span class="feedback__text2">FOR OUR NEWLETTER AND PROMOTION</span>
+
+                        <form class="feedback__email" action="#">
+                            <div class="feedback__mail-flex">
+                                <input class="feedback__email-input" type="email" placeholder="Enter Your Email">
+                                <button class="feedback__button" type="submit"><span>Subscribe</span></button>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Подвал -->
+        <section class="footer">
+            <h4 class="visually-hidden">Join Us</h4>
+            <div class="container">
+
+                <div class="footer__flex">
+
+                    <div class="footer__left">© 2017  Brand  All Rights Reserved.</div>
+
+                    <div class="footer__right">
+                        <a class="footer__social" href="#"><span class="fa fa-facebook-f fa-fw fa-lg"></span></a>
+                        <a class="footer__social" href="#"><span class="fa fa-instagram fa-fw fa-lg"></span></a>
+                        <a class="footer__social" href="#"><span class="fa fa-pinterest fa-fw fa-lg"></span></a>
+                        <a class="footer__social" href="#"><span class="fa fa-twitter fa-fw fa-lg"></span></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </footer>
+
+    <!-- Подключение скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>
