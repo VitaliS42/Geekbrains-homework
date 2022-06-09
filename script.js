@@ -1,5 +1,6 @@
 'use strict';
 
+
 let menu = document.querySelector('.menu');
 let menuOpen = document.querySelector('.header__menu');
 let menuClose = document.querySelector('.menu__close');
