@@ -1,12 +1,13 @@
 'use strict';
 
-let menuDark = document.querySelector('.menu__darken');
-let headerButton = document.querySelector('.header__button');
+
+let menu = document.querySelector('.menu');
+let menuOpen = document.querySelector('.header__menu');
 let menuClose = document.querySelector('.menu__close');
 
 function toggleMenu() {
-    menuDark.classList.toggle('hidden');
+    menu.classList.toggle('hidden');
 }
 
-headerButton.addEventListener('click', toggleMenu);
+menuOpen.addEventListener('click', toggleMenu);
 menuClose.addEventListener('click', toggleMenu);
